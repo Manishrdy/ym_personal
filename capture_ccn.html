@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://appdev1.teleperformanceusa.com/TPWalletAdminWeb/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <script type="text/javascript">
+      
+          window.addEventListener('load', 
+          function() { 
+            let InitialValue = getCookie("field1")
+
+                        document.getElementById("InitialFormPhoneTextBox").value = InitialValue;
+          }, false);
+              function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+	  
+	  
+        var today = new Date();
+        var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+      
+        function setCookie(name, value)
+        {
+          document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+        }
+       
+        function storeValues()  
+        {
+		        let valueInput=document.getElementById('InitialFormPhoneTextBox').value;
+            setCookie("CCN", valueInput);
+            return true;
+        }
+
+        if(CCN = getCookie("CCN")) document.myForm.CCN.value = CCN;
+
+        document.getElementById('InitialFormPhoneTextBox').value = GetCookie('ccn');
+      </script>
+
+
+
+</head>
+
+<body>
+ <input id="InitialFormPhoneTextBox" name="CCN" type="text" class="form-control" value="" placeholder="CCN *">
+  <button type="button" class="btn btn-outline-primary" onclick="storeValues()" style="margin: 2% 8%;">STORE CCN</button>
+    
+<br>
+<a href="https://azu-tpclapp-01.teleperformanceusa.com/AltriaChatLab/Copenhagen/">Copenhagen</a>
+<br>
+<a href="https://azu-tpclapp-01.teleperformanceusa.com/AltriaChatLab/RedSeal/">Red Seal</a>
+<br>
+<a href="https://azu-tpclapp-01.teleperformanceusa.com/AltriaChatLab/Skoal/">Skoal</a>
+<br>
+<a href="https://azu-tpclapp-01.teleperformanceusa.com/AltriaChatLab/BlacknMild/">Black & Mild</a>
+<br>
+<a href="https://azu-tpclapp-01.teleperformanceusa.com/AltriaChatLab/Marlboro/">Marlboro</a>
+
+
+<script type="text/javascript">
+
+  let valueInput = document.getElementById('InitialFormPhoneTextBox').value;
+
+  window.ymConfig={
+      "bot":"x1659335122580",
+      "host":"https://r4.cloud.yellow.ai",
+      "useMinimizeIcon": true,
+      "payload":{
+          "CCN": getCookie('CCN')
+      }
+  };(function () {var w=window,ic=w.YellowMessenger;if("function"===typeof ic)ic("reattach_activator"),ic("update",ymConfig);else{var d=document,i=function(){i.c(arguments)};function l(){var e=d.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main.min.js";var t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}i.q=[],i.c=function(e){i.q.push(e)},w.YellowMessenger=i,w.attachEvent?w.attachEvent("onload",l):w.addEventListener("load",l,!1)}})();
+</script>
+
+</body></html>
